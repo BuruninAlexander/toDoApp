@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import PostItem from './PostItem'
 const PostList = ({ posts, title }) => {
-    console.log(posts)
+    // console.log(posts)
     return (
         <div>
             <h1 style={{ textAlign: 'center' }}>

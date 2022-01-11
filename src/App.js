@@ -10,30 +10,33 @@ function App() {
 
   const [posts, setPost] = useState(
     [{ id: 1, title: "javascript", body: 'Description' },
-    { id: 1, title: "javascript", body: 'Description' },
+    { id: 4, title: "javascript", body: 'Description' },
     { id: 2, title: "javascript", body: 'Description' },
     { id: 3, title: "javascript", body: 'Description' },
     ]
   )
-  console.log(posts, setPost)
+  const [title, setTitle] = useState('www')
+  console.log(title)
+  const addNewPOst = (e) => {
+    e.preventDefault()
+    console.log(title)
+  }
+  // console.log(posts, setPost)
   return (
     <div className="App">
       <form>
-        <input type="text" placeholder="название поста"></input>
-        <MyInput propstype="text" placeholder="описание поста"></MyInput>
-        <MyButton disabled={true}>удалить</MyButton>
-        <MyButton disabled={true}>вверх</MyButton>
-        <MyButton disabled={true}>вниз</MyButton>
-        <MyButton disabled={true}>пополам</MyButton>
+        {/* управляемый компонент  */}
+        <MyInput
+          value={title}
+          onChange={e => setTitle(e.target.value)}
+          type="text"
+          placeholder="описание поста">
 
-
-        {/* onChange={event => setValue(event.target.value)} /> /* тут мы достаем спомощью дом дерева значение инпута которое
-        будем вводить, так как стоит onChange ( то реагировать он будет на каждый введенный символ) */}
+        </MyInput>
+        <MyButton onClick={addNewPOst} disabled={false}>удалить</MyButton>
       </form>
       <PostList posts={posts} title="Список постов 1" />
-      {/* <Counter />
-      <MyInput /> */}
-    </div>
+    </div >
   );
 }
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 const PostItem = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <div className="App">
             <div className="posts">
@@ -10,7 +10,7 @@ const PostItem = (props) => {
                         {props.post.body}
                     </div>
                     <div className="postsBTN">
-                        <button>Добавить задачу</button>
+                        <button>удалить</button>
                     </div>
                 </div>
             </div>
