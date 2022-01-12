@@ -1,10 +1,10 @@
 import React from 'react'
-import classes from './MyInputModule.css'
+// import classes from '/Users/buruninaleksandr/Desktop/webApp Type+React/my-app/src/Ui/Input/'
 const MyInput = (props) => {
     return (
 
         <div>
-            <input className={classes.MyInput} {...props}></input>
+            <input className={"Тут должны быть стили"} {...props}></input>
 
         </div>
     )
