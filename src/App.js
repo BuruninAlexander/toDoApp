@@ -26,7 +26,21 @@ function App() {
   return (
     <div className="App">
       <PostForm create={createPost} />
-      <PostList remove={removePost} posts={posts} title="Список постов 1" />
+      <div>
+        <select>
+          <option value="value1">Name</option>
+          <option value="value2">Description</option>
+          <option value="value3">somethingelse</option>
+
+        </select>
+      </div>
+      <hr style={{ margin: "15px" }}></hr> // горизонтальный разделитель
+      {posts.length !== 0
+        ?
+        <PostList remove={removePost} posts={posts} title="Список постов 1" />
+        :
+        <h1 style={{ textAlign: "center" }}> посты не найдены</h1>
+      }
     </div >
   );
 }

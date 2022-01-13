@@ -32,7 +32,7 @@ const PostForm = ({ create }) => {         // задать вопрос если
                     type="text"
                     placeholder="описание поста">
                 </MyInput>
-                <MyButton onClick={addNewPOst} disabled={false}>удалить</MyButton>
+                <MyButton onClick={addNewPOst} disabled={false}>Добавить пост</MyButton>
             </form>
         </div>
     )
