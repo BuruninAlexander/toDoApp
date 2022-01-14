@@ -11,7 +11,15 @@ const PostItem = (props) => {
                         {props.post.body}
                     </div>
                     <div className="postsBTN">
-                        <MyButton onClick={() => props.remove(props.post)} >Удалить</MyButton>
+                        <MyButton style={{
+                            padding: "5px 15px",
+                            color: "teal",
+                            fontsize: "14px",
+                            background: "transparent",
+                            border: " 1px solid teal",
+                            cursor: "pointer",
+                        }}
+                            onClick={() => props.remove(props.post)} >Удалить</MyButton>
                     </div>
                 </div>
             </div>
